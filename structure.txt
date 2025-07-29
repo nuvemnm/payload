@@ -1,0 +1,60 @@
+seu_projeto_segmentacao_unet/
+├── data/
+│   ├── raw/
+│   │   ├── images/
+│   │   │   ├── image_001.jpg
+│   │   │   ├── image_002.jpg
+│   │   │   └── ...
+│   │   └── masks/
+│   │       ├── image_001_mask.png
+│   │       ├── image_002_mask.png
+│   │       └── ...
+│   ├── processed/
+│   │   ├── train/
+│   │   │   ├── images/
+│   │   │   └── masks/
+│   │   ├── val/
+│   │   │   ├── images/
+│   │   │   └── masks/
+│   │   └── test/
+│   │       ├── images/
+│   │       └── masks/
+├── models/
+│   ├── checkpoints/
+│   │   ├── unet_checkpoint_epoch_05.keras
+│   │   └── ...
+│   └── trained_models/
+│       ├── unet_final_model_v1.keras
+│       └── ...
+├── src/
+│   ├── data_processing/
+│   │   ├── __init__.py
+│   │   └── prepare_dataset.py       # Script para ler dados raw e criar processed
+│   ├── model_architectures/
+│   │   ├── __init__.py
+│   │   └── unet.py                  # Definição da arquitetura U-Net
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── image_utils.py           # Funções para leitura/pré-processamento de imagens
+│   │   └── metrics.py               # Funções de métricas customizadas (IoU, Dice)
+│   ├── train.py                     # Script principal de treinamento
+│   └── predict.py                   # Script para fazer inferência em novas imagens/vídeos
+├── notebooks/
+│   ├── data_exploration.ipynb       # Notebooks para explorar e visualizar dados
+│   ├── model_training_dev.ipynb     # Notebook para experimentar com o treinamento
+│   └── inference_demo.ipynb         # Notebook para demonstrar inferência
+├── results/
+│   ├── predictions/
+│   │   ├── predicted_image_001.png
+│   │   └── ...
+│   ├── logs/
+│   │   ├── training_log_20250717.csv
+│   │   └── ...
+│   └── plots/
+│       ├── loss_curve.png
+│       ├── iou_curve.png
+│       └── ...
+├── .gitignore                       # Para ignorar arquivos grandes ou sensíveis no Git
+├── requirements.txt                 # Lista de dependências do Python
+└── README.md                        # Documentação do projeto
+Explicação Detalhada de Cada Diretório e Arquivo
